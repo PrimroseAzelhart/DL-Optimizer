@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AppLayout from '@/layout/AppLayout.vue';
 
 const Block = () => import('@/views/Block.vue');
+const Load = () => import('@/views/Load.vue');
 const Setting = () => import('@/views/Setting.vue');
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
                 path: '/block',
                 name: 'Block',
                 component: Block
+            },
+            {
+                path: '/load',
+                name: 'Load',
+                component: Load
             },
             {
                 path: '/setting',
