@@ -11,8 +11,8 @@ const commonOptionsChecked = ref([]);
 
 <template>
 <van-tabs v-model="active">
-    <van-tab title="常用" name="common">
-        <van-checkbox-group v-model="commonOptionsChecked" v-for="i in commonOptions">
+    <van-tab title="常用" name="common" class="my-3 mx-4">
+        <van-checkbox-group v-model="commonOptionsChecked" v-for="i in commonOptions" class="my-2 ">
             <van-checkbox :name="i">{{ i }}</van-checkbox>
         </van-checkbox-group>
     </van-tab>
@@ -21,7 +21,4 @@ const commonOptionsChecked = ref([]);
 </template>
 
 <style>
-.van-checkbox {
-    margin: 0 0 0.5rem 2rem;
-}
 </style>
