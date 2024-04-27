@@ -9,6 +9,7 @@ import { Tabbar, TabbarItem } from 'vant';
 import { Tab, Tabs } from 'vant';
 import { Cell, CellGroup } from 'vant';
 import { Checkbox, CheckboxGroup } from 'vant';
+import { Button } from 'vant';
 
 const app = createApp(App);
 
@@ -22,5 +23,6 @@ app.use(Cell);
 app.use(CellGroup);
 app.use(Checkbox);
 app.use(CheckboxGroup);
+app.use(Button);
 
 app.mount('#app')
