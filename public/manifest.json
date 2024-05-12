@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "DL Optimizer",
-    "description": "Make the UX of DLsite better",
+    "description": "Improve the UX of DLsite",
     "version": "0.1",
     "action": {
         "default_popup": "index.html"
@@ -10,7 +10,12 @@
         "service_worker": "scripts/background.js"
     },
     "host_permissions": [
-        "*://*.kickstarter.com/*"
+        "*://*.dlsite.com/*"
     ],
+    "content_scripts": [{
+        "matches": ["*://*.dlsite.com/*"],
+        "run_at": "document_end",
+        "js": ["scripts/block.js"]
+    }],
     "permissions": ["scripting", "activeTab", "tabs", "webNavigation", "webRequest"]
 }
